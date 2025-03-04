@@ -22,20 +22,36 @@ Console.WriteLine("4. Mark Order as Fulfilled");
 Console.WriteLine("5. Save and Exit");
 
 Console.WriteLine("\tADMIN MENU\n" +
-       "1. statistics\n" +
-       "2. CASH REGISTER\n" +
-       "3. EMPLOYEES\n" +
-       "4. PRICES\n" +
-       "5.DELIVERY\n" +);
+       "1. Refilling the gas station with fuel\n" +
+       "2. View available fuel\n" +
+       "3. Change in fuel prices\n" +
+       "4. withdrawal of money\n" +
+       "5.Withdrawal of earned funds\n" +);
 Console.WriteLine("______________________________");
 
 
-public class Fuel
+Console.Write("Your choice: ");
+int choice = int.Parse(Console.ReadLine());
+
+
+switch (choice)
+{
+	case 1:
+    var item = new Fuel();
+    item.Type = Console.ReadLine();
+    item.Price = double.Parse(Console.ReadLine();
+    item.Capacity = double.Parse(Console.ReadLine());
+    item.Vendor = (Console.ReadLine());
+    break;
+}
+
+
+public class Fuel 
 {
 	// властивості продукта
 	public string Type { get; set; }
 	public double Capacity { get; set; }
-    public string Venelor { get; set; }
+    public string Vendor { get; set; }
     public double Price  { get; set; }
 
 
