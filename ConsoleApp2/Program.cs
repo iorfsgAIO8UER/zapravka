@@ -15,6 +15,8 @@
 	замовлення кави
 */
 
+using System.Xml.Linq;
+
 Console.WriteLine("1.hallo ");
 Console.WriteLine("2. Add/Edit/Delete Services");
 Console.WriteLine("3. Accept Order for Shipment");
@@ -54,6 +56,26 @@ public class Fuel
     public string Vendor { get; set; }
     public double Price  { get; set; }
 
+    public void ReadFromConsole()
+    {
+        Console.Write("Enter name: ");
+        Type = Console.ReadLine();
+        Console.Write("Enter price: ");
+        Capacity = double.Parse(Console.ReadLine());
+        Description = Console.ReadLine();
+        Vendor = int.Parse(Console.ReadLine());
+        Price = int.Parse(Console.ReadLine());
+        Category = Console.ReadLine();
+    }
+
+    public void Show()
+    {
+        Console.WriteLine($"Name: {Name}");
+        Console.WriteLine($"Price: {Price}$");
+        Console.WriteLine($"Quantity: {Quantity}$");
+        Console.WriteLine($"Discount: {Discount}%");
+        Console.WriteLine($"Category: {Category}");
+    }
 
 
 
